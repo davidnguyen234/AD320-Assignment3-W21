@@ -12,7 +12,7 @@ router.get('/:id', (req, res, next) => {
     const found = cars.some(car => car.id === parseInt(req.params.id));
 
     if (found) {
-        res.json(cars.filter(car => car.id == parseInt(req.params.id)));
+        res.json(cars.filter(car => car.id === parseInt(req.params.id)));
     } else {
         res.status(200).json("{}");
     }
